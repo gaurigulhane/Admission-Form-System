@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Student Feedback Form</h2>
+
+        <form onsubmit="return validateForm()">
+            
+            <label>Student Name:</label>
+            <input type="text" id="name">
+
+            <label>Email ID:</label>
+            <input type="text" id="email">
+
+            <label>Mobile Number:</label>
+            <input type="text" id="mobile">
+
+            <label>Department:</label>
+            <select id="department">
+                <option value="">Select</option>
+                <option>CSE</option>
+                <option>IT</option>
+                <option>ENTC</option>
+            </select>
+
+            <label>Gender:</label>
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" value="Female"> Female
+
+            <label>Feedback:</label>
+            <textarea id="feedback"></textarea>
+
+            <br><br>
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+
+        </form>
+    </div>
+</body>
+</html>
