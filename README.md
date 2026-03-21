@@ -1,43 +1,48 @@
-🎓 Admission Form Project
+# Admission Form Project
 
-📌 Overview
+## Overview
+This project is a simple admission registration form built using HTML, CSS, and JavaScript. It also includes validation and automation testing using Python Selenium.
 
-This project is a simple Admission Registration Form built using HTML, CSS, and JavaScript with form validation. It also includes automation testing using Selenium (Python)
-🛠️ Technologies Used
+## Technologies Used
+HTML  
+CSS  
+JavaScript  
+Python (Selenium)  
 
-HTML
-CSS
-JavaScript
-Python (Selenium)
-📂 Project Structure
+## Project Structure
+form.html - main form page  
+style.css - styling file  
+validate.js - validation logic  
+test_form.py - selenium testing  
+README.md - documentation  
 
-Admission-Form/
-│── form.html
-│── style.css
-│── validate.js
-│── test_form.py
+## Features
+User-friendly form  
+Field validation  
+Email validation  
+Password match check  
+Simple and clean design  
+Automation testing  
 
-✨ Features
-User-friendly registration form
-Input validation using JavaScript
-Password matching check
-Course selection validation
-Automated testing using Selenium
-🚀 How to Run
-▶️ Run Frontend
-Open form.html in browser
-▶️ Run Selenium Test
-Install dependencies:
-pip install selenium
-Run:
-python test_form.py
-📸 Output
-Form validation alerts
-Successful registration message
-Automated form filling via Selenium
-📌 Future Improvements
-Add backend (Node.js / Flask)
-Store user data in database
-Improve UI design
-👩‍💻 Author
+## How to Run
+
+Run Frontend  
+Open form.html in browser  
+
+Run Selenium Test  
+Install selenium using pip install selenium  
+Run python test_form.py  
+
+## Output
+Shows error for invalid input  
+Displays validation messages  
+Successful submission  
+Automated testing  
+
+## Future Improvements
+Add backend  
+Store data in database  
+Improve design  
+
+## Author
 Gauri Gulhane
