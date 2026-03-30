@@ -1,48 +1,44 @@
-# Admission Form Project
-
-## Overview
-This project is a simple admission registration form built using HTML, CSS, and JavaScript. It also includes validation and automation testing using Python Selenium.
-
-## Technologies Used
-HTML  
-CSS  
-JavaScript  
-Python (Selenium)  
+# Student Feedback Registration Form
 
 ## Project Structure
-form.html - main form page  
-style.css - styling file  
-validate.js - validation logic  
-test_form.py - selenium testing  
-README.md - documentation  
+- `index.html`: The HTML form structure
+- `style.css`: Visual styling using external CSS
+- `script.js`: Client-side form validation rules
+- `test_form.py`: Selenium automated test cases (pytest)
+- `requirements.txt`: Python package dependencies for Selenium runs
+- `Jenkinsfile`: Jenkins declarative pipeline configuration
 
-## Features
-User-friendly form  
-Field validation  
-Email validation  
-Password match check  
-Simple and clean design  
-Automation testing  
+## How to Run Locally
 
-## How to Run
+### View the Web Form
+1. Simply double-click on `index.html` to open it in Chrome, Edge, or Firefox.
+2. The form validates dynamically on submission.
 
-Run Frontend  
-Open form.html in browser  
+### Run Selenium Automated Tests locally
+1. Ensure you have Python installed locally and added to PATH. 
+2. Open a terminal (PowerShell/CMD) in this directory: `C:\Users\Dell\.gemini\antigravity\scratch\StudentFeedbackForm`.
+3. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Run the tests:
+   ```bash
+   pytest test_form.py -v
+   ```
 
-Run Selenium Test  
-Install selenium using pip install selenium  
-Run python test_form.py  
+## Jenkins Automation Setup Workflow
 
-## Output
-Shows error for invalid input  
-Displays validation messages  
-Successful submission  
-Automated testing  
-
-## Future Improvements
-Add backend  
-Store data in database  
-Improve design  
-
-## Author
-Gauri Gulhane
+To automate test executing using Jenkins, follow these instructions:
+1. **Install Jenkins**: Download and install Jenkins for Windows from [jenkins.io](https://www.jenkins.io/download/).
+2. **Plugins Required**: Ensure the "Pipeline" and "JUnit" plugins are installed in the Jenkins dashboard.
+3. **Create Job**:
+   - Go to Jenkins Dashboard -> **New Item**.
+   - Enter a name (e.g., `StudentFeedbackForm_Tests`) and select **Pipeline**, then click OK.
+4. **Configure Pipeline**:
+   - In the Configuration page under the **Pipeline** section, you can configure it via SCM (if you push this code to GitHub).
+   - Alternatively, choose **Pipeline script** and copy-paste the contents of the `Jenkinsfile` directly into the script area.
+   - Note: Since this Jenkinsfile assumes a local Windows build server context, it uses `bat` scripts to run Python commands.
+5. **Run the Job**:
+   - Save the configuration and click **Build Now**.
+   - Check the **Console Output** of the build to see the `pip install` logs and test execution.
+   - After the build finishes, view the generated **Test Result** trend directly on the Jenkins build page.
